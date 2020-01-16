@@ -1,8 +1,8 @@
 {
     "name": "smarttly/php-serve",
     "type": "library",
-    "description": "SlimRest local serve",
-    "keywords": ["rest", "api", "framework", "command", "server", "development"],
+    "description": "PHP Built-in web server",
+    "keywords": ["rest", "api", "framework", "command", "server", "development", "built-in"],
     "homepage": "https://github.com/mostofreddy/php_serve",
     "license": "MIT",
     "version": "0.1.0",
