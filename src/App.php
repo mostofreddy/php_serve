@@ -11,18 +11,20 @@ class App
 {
     public static function run(): void
     {
-        $cmd = new Application();
-        static::add($cmd);
-        static::execute($cmd);
+        $app = new Application();
+        static::add($app);
+        static::execute($app);
     }
 
-    protected static function execute(Application $cmd): void
+    protected static function execute(Application $app): void
     {
-        $cmd->run();
+        $app->run();
     }
 
-    protected static function add(Application $cmd): void
+    protected static function add(Application $app): void
     {
-        $cmd->add(new ServerCommand());
+        $cmd = new ServerCommand();
+        $app->add($cmd);
+        $app->setDefaultCommand($cmd->getName());
     }
 }
