@@ -61,6 +61,7 @@ class ServerCommand extends Command
         $binary = ProcessUtils::validateInput(__METHOD__, (new PhpExecutableFinder())->find(false));
 
         $output->writeln("PHP development server started on <comment>http://{$host}:{$port}</comment>");
+        $output->writeln("Document root: <comment>{$target}</comment>");
 
         $cmd = "{$binary} -S {$host}:{$port} -t {$target}";
         passthru($cmd);
